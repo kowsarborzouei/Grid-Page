@@ -7,7 +7,7 @@
     background-color: white;
     margin: auto;
     display: grid;
-    grid-template: 23rem 18rem 18rem 8rem/21rem 28.25rem 28.25rem;
+    grid-template: 23rem auto auto 8rem/21rem 28.25rem 28.25rem;
     grid-template-areas: "sidebar header header"
                          "sidebar main main"
                          "sidebar main main"
@@ -27,6 +27,7 @@
 .main{
     background-color: white;
     grid-area: main;
+    position: relative;
 }
 .footer{
     grid-area: footer;
@@ -119,15 +120,44 @@ img{
     width: 28.28rem;
     height: 18rem;
     object-fit: cover;
-    opacity: 1;
+    display: inline;
+
+
+   /* opacity: 1;
     transition: .5s ease;
     backface-visibility: hidden;
-    cursor: pointer;
+    cursor: pointer;*/
 
 }
-img:hover{
+/*img:hover{
     opacity: 0.3;
     background-color: #012B55;
+}*/
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:rgba(11,110,165,0.5);
+}
+.main:hover .overlay{
+    opacity: 1;
+
+
+}
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 @media screen and (max-width: 370px){
@@ -157,7 +187,7 @@ img:hover{
         display: block;
         grid-area: footer;
         text-align: center;
-        /*visibility: visible;*/
+        visibility: visible;
     }
     p{
         font-size: 14px;
