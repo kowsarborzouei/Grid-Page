@@ -29,7 +29,7 @@
     grid-area: main;
     display: grid;
     grid-template: 18rem 18rem/ 28.28rem 28.28rem;
-    grid-gap: 3px;
+    grid-gap: 5px;
 }
 .new{
     position: relative;
