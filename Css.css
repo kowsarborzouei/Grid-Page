@@ -14,6 +14,7 @@
                          "footer footer footer";
     row-gap: 5px;
     column-gap: 5px;
+
 }
 .sidebar{
     background-color: white;
@@ -31,7 +32,6 @@
     grid-area: footer;
     text-align: center;
     visibility: hidden;
-    grid-area: footer;
 }
 p{
     font-size: 1.75rem;
@@ -119,6 +119,15 @@ img{
     width: 28.28rem;
     height: 18rem;
     object-fit: cover;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    cursor: pointer;
+
+}
+img:hover{
+    opacity: 0.3;
+    background-color: #012B55;
 }
 
 @media screen and (max-width: 370px){
@@ -148,7 +157,7 @@ img{
         display: block;
         grid-area: footer;
         text-align: center;
-        visibility: visible;
+        /*visibility: visible;*/
     }
     p{
         font-size: 14px;
