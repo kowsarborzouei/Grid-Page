@@ -1,21 +1,19 @@
 @import url('http://fonts.cdnfonts.com/css/adobe-clean?styles=87103,87100,87093,87097');
 .container{
-    width: 90vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+
+    max-width: 1320px;
     background-color: white;
-    overflow: scroll;
     margin: auto;
-    margin-top: 10vh;
     display: grid;
-    grid-template: 23rem 18rem 18rem/21rem 28.25rem 28.25rem;
+    grid-template: 23rem 18rem 18rem 8rem/21rem 28.25rem 28.25rem;
     grid-template-areas: "sidebar header header"
                          "sidebar main main"
-                         "sidebar main main";
-    padding: 0 4rem 0 4rem;
-    box-sizing: border-box;
+                         "sidebar main main"
+                         "footer footer footer";
     row-gap: 5px;
     column-gap: 5px;
-    box-shadow: 0 0 10px silver;
 }
 .sidebar{
     background-color: white;
@@ -28,6 +26,12 @@
 .main{
     background-color: white;
     grid-area: main;
+}
+.footer{
+    grid-area: footer;
+    text-align: center;
+    visibility: hidden;
+    grid-area: footer;
 }
 p{
     font-size: 1.75rem;
@@ -55,6 +59,10 @@ h4{
     padding-top: 30px;
 
 }
+.div-footer{
+    display: flex;
+    flex-direction: column;
+}
 h1{
     font-weight: 600;
     font-family: 'Adobe Clean', sans-serif;
@@ -79,9 +87,10 @@ h3{
     line-height: 3px;
 }
 ion-icon{
+
+    align-items: center;
     font-size: 15px;
     text-align: center;
-
 }
 button{
     border-radius: 100%;
@@ -91,11 +100,151 @@ button{
     cursor:pointer;
     transition-duration: 0.4s;
     background-color: rgba(1, 43, 85, 0.1);
-
 }
 .div-button{
     margin-top: 20px;
 }
+.div-button1{
+    margin-top: 20px;
+}
 button:hover{
     background-color: silver;
+}
+.three{
+    float: right;
+    margin-right: 15px;
+    visibility: hidden;
+}
+img{
+    width: 28.28rem;
+    height: 18rem;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 370px){
+    .container{
+        /*width: 370px;
+        height: 900px;*/
+        background-color:white;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-items: start;
+        margin-left: 0;
+    }
+    .sidebar{
+        background-color: white;
+        grid-area: sidebar;}
+    .header{
+        background-color: #F7F8F9;
+        display: block;
+
+    }
+    .main{
+        background-color: white;
+        grid-area: main;
+    }
+    .footer{
+        display: block;
+        grid-area: footer;
+        text-align: center;
+        visibility: visible;
+    }
+    p{
+        font-size: 14px;
+        text-align: center;
+        font-family: 'Adobe Clean', sans-serif;
+        color: #012B55;
+        line-height: 26px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    h4{
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        font-family: 'Adobe Clean', sans-serif;
+        color: #597188;
+
+    }
+    .div-header{
+        padding: 30px;
+        display: block;
+    }
+    .div-sidebar{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+
+    }
+    h1{
+        font-weight: 600;
+        font-family: 'Adobe Clean', sans-serif;
+        color: #012B55;
+        font-size: 26px;
+        line-height: 55px;
+    }
+    h2{
+        font-size: 17px;
+        font-weight:400;
+        font-family: 'Adobe Clean', sans-serif;
+        color: #41576D;
+        line-height: 5px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        display: none;
+    }
+    h3{
+        font-size: 16px;
+        font-weight: 300;
+        font-family: 'Adobe Clean', sans-serif;
+        color: #41576D;
+        line-height: 3px;
+        display: none;
+    }
+    .icon{
+
+        align-items: center;
+        font-size: 15px;
+        text-align: center;
+    }
+    button{
+        border-radius: 100%;
+        width: 2.1rem;
+        height: 2.1rem;
+        border: 0;
+        cursor:pointer;
+        transition-duration: 0.4s;
+        background-color: rgba(1, 43, 85, 0.1);
+
+    }
+    .div-button{
+        margin-top: 20px;
+        text-align: center;
+        display: block;
+
+    }
+    .div-button1{
+        margin-top: 20px;
+        display: none;
+    }
+    button:hover{
+        background-color: silver;
+    }
+    .three{
+        float: right;
+        margin-right: 15px;
+        visibility: visible;
+        font-size: 30px;
+        color: #012B55;
+
+    }
+    img{
+        width: 21rem;
+        height: 20rem;
+        object-fit: cover;
+    }
+
+
+
 }
