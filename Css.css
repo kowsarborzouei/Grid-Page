@@ -27,8 +27,16 @@
 .main{
     background-color: white;
     grid-area: main;
+    display: grid;
+    grid-template: 18rem 18rem/ 28.28rem 28.28rem;
+    grid-gap: 3px;
+}
+.new{
     position: relative;
 }
+
+
+
 .footer{
     grid-area: footer;
     text-align: center;
@@ -120,7 +128,7 @@ img{
     width: 28.28rem;
     height: 18rem;
     object-fit: cover;
-    display: inline;
+    display: block;
 
 
    /* opacity: 1;
@@ -170,6 +178,7 @@ img{
         flex-direction: column;
         justify-items: start;
         margin-left: 0;
+
     }
     .sidebar{
         background-color: white;
@@ -182,6 +191,10 @@ img{
     .main{
         background-color: white;
         grid-area: main;
+        display: flex;
+        flex-direction: column;
+        /*grid-template: 18rem 18rem/ 28.28rem 28.28rem;*/
+
     }
     .footer{
         display: block;
